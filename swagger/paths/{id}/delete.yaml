@@ -1,0 +1,25 @@
+tags:
+  - Products
+summary: Delete product by id
+operationId: deleteProductById
+description: 'Delete product by id'
+security:
+  - bearerAuth: []
+parameters:
+  - in: path
+    name: id
+    required: true
+    schema:
+      type: string
+      example: '65ca67e7ae7f10c88b598384'
+responses:
+  '204':
+    description: 'Delete product by id'
+  '400':
+    $ref: ../../components/responces/400.yaml
+  '401':
+    $ref: '../../components/responces/401.yaml'
+  '404':
+    $ref: ../../components/responces/404.yaml
+  '500':
+    $ref: ../../components/responces/500.yaml
